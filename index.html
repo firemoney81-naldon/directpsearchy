@@ -1,23 +1,1087 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
-    </nav>
+
+
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "다이렉트 자동차보험비교 통합 가이드 센터",
+        "url": "https://naver.com",
+        "description": "2026년 기준 연령대별 차종별 다이렉트 자동차보험비교 추천 정보를 제공합니다. 평균 금액 계산기, 가입 할인 혜택, 보배드림 펨코 디시 후기, 저렴한곳 및 가장 싼곳 견적 상담을 지원합니다.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "자동차보험비교 가이드센터",
+            "email": "naver.com"
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://naver.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS Styles with Premium, Soft and Professional Looks -->
+    <style>
+        /* Base Styling and Reset */
+        body { 
+            font-family: 'Noto Sans KR', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            color: #2c3e50; 
+            line-height: 1.8; 
+            background-color: #f4f7fa; 
+        }
+        h1, h2, h3, h4 { 
+            margin-top: 0; 
+            font-weight: 700; 
+            color: #0f2b5c;
+        }
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.3;
+        }
+        h2 {
+            font-size: 2.2rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.8rem;
+            margin-top: 3rem;
+        }
+        h3 {
+            font-size: 1.6rem;
+            margin-top: 2rem;
+            color: #1e3a8a;
+        }
+        h4 {
+            font-size: 1.25rem;
+            margin-top: 1.5rem;
+            color: #2563eb;
+        }
+        a { 
+            text-decoration: none; 
+            color: inherit; 
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: #2563eb;
+        }
+        ul, ol { 
+            padding-left: 1.5rem; 
+            margin-bottom: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            display: block; 
+        }
+
+        /* Color Palette and Styling Variables */
+        :root {
+            --primary-color: #0f2b5c; /* deep navy */
+            --secondary-color: #2563eb; /* royal blue */
+            --accent-color: #e0f2fe; /* light blue background */
+            --highlight-color: #dc2626; /* clear dark red for highlight */
+            --text-color: #334155;
+            --light-bg: #ffffff;
+            --dark-bg: #0f172a;
+            --border-color: #cbd5e1;
+            --soft-mint: #f0fdf4;
+            --soft-orange: #fff7ed;
+        }
+
+        /* Layout Structure */
+        .container { 
+            max-width: 1100px; 
+            margin: 0 auto; 
+            padding: 0 1.5rem; 
+        }
+        
+        /* Header Section */
+        .header { 
+            background-color: var(--light-bg); 
+            padding: 1.2rem 0; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar-brand {
+            font-weight: 900;
+            font-size: 1.6rem;
+            color: var(--primary-color);
+        }
+        .navbar-brand span {
+            color: var(--secondary-color);
+        }
+        .quick_link_btn {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .quick_link_btn:hover {
+            background-color: var(--primary-color);
+            color: #ffffff;
+        }
+
+        /* Hero Banner Area */
+        .banner-area { 
+            background: linear-gradient(135deg, #f0f4f8 0%, #e1eaf2 100%); 
+            padding: 80px 0; 
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .banner-content h1 span.highlight { 
+            color: var(--secondary-color); 
+        }
+        .banner-content p {
+            font-size: 1.2rem;
+            color: #475569;
+            margin-top: 1.5rem;
+            font-weight: 400;
+        }
+
+        /* Main Form Area designed to improve dwell time and interaction */
+        .feature-area { 
+            padding: 80px 0; 
+            background-color: var(--light-bg); 
+        }
+        .mainFormWrap { 
+            background-color: #ffffff; 
+            padding: 40px; 
+            border-radius: 16px; 
+            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.08); 
+            border: 1px solid #e2e8f0;
+            margin-top: -120px;
+            position: relative;
+            z-index: 10;
+        }
+        .mainTextCell { 
+            font-size: 2.2rem; 
+            color: var(--primary-color); 
+            text-align: center; 
+            font-weight: 800; 
+            margin-bottom: 0.5rem; 
+        }
+        .subTextCell { 
+            font-size: 1.15rem; 
+            text-align: center; 
+            color: #64748b; 
+            margin-bottom: 2.5rem; 
+        }
+        
+        /* Interactive Form Elements for Longer Dwell Time */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .input-group label {
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        .input-group input, .input-group select { 
+            border-radius: 8px; 
+            border: 1.5px solid var(--border-color); 
+            padding: 0.85rem 1rem; 
+            font-size: 1rem; 
+            width: 100%; 
+            box-sizing: border-box; 
+            background-color: #f8fafc;
+            transition: border-color 0.2s, background-color 0.2s;
+        }
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            background-color: #ffffff;
+        }
+        
+        /* Interactive Checkbox Grid */
+        .checkbox-container-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 0.8rem;
+            margin-bottom: 2rem;
+        }
+        .checkbox-item {
+            background-color: #f1f5f9;
+            padding: 0.8rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .checkbox-item:hover {
+            background-color: #e2e8f0;
+        }
+        .checkbox-item input {
+            margin-right: 0.6rem;
+            width: 1.1rem;
+            height: 1.1rem;
+        }
+        .checkbox-item span {
+            font-size: 0.88rem;
+            font-weight: 500;
+        }
+
+        .btnCompare { 
+            background-color: var(--secondary-color); 
+            color: white; 
+            border: none; 
+            padding: 1.1rem 2.5rem; 
+            border-radius: 8px; 
+            font-size: 1.2rem; 
+            font-weight: 700;
+            cursor: pointer; 
+            transition: background-color 0.2s ease, transform 0.1s ease; 
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(37,99,235,0.2);
+        }
+        .btnCompare:hover { 
+            background-color: var(--primary-color); 
+            transform: translateY(-1px);
+        }
+        .btnCompare:active {
+            transform: translateY(1px);
+        }
+
+        .inputInfoTextCell {
+            font-size: 0.85rem;
+            color: #64748b;
+            text-align: center;
+            margin-top: 1rem;
+        }
+        .showPolicyWin {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        .showPolicyWin label {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .btnViewPolicy {
+            color: var(--secondary-color);
+            cursor: pointer;
+            font-weight: 700;
+        }
+
+        /* Editorial and Rich Content Sections */
+        .content-section { 
+            padding: 80px 0; 
+            background-color: var(--light-bg); 
+            border-top: 1px solid #e2e8f0; 
+        }
+        .content-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.8rem;
+            color: var(--text-color);
+            text-align: justify;
+        }
+        .highlight-box {
+            background-color: var(--soft-orange);
+            padding: 1.5rem;
+            border-left: 5px solid var(--secondary-color);
+            border-radius: 4px;
+            margin: 2rem 0;
+        }
+        .highlight-box p {
+            margin-bottom: 0;
+            font-weight: 500;
+            color: #1e293b;
+        }
+
+        /* Data Visualization & Tables */
+        .table-responsive {
+            overflow-x: auto;
+            margin: 2.5rem 0;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02);
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            font-size: 0.95rem; 
+            min-width: 600px;
+        }
+        th, td { 
+            border: 1px solid #e2e8f0; 
+            padding: 14px 18px; 
+            text-align: left; 
+        }
+        th { 
+            background-color: #f8fafc; 
+            font-weight: 700; 
+            color: var(--primary-color);
+        }
+        tr:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        /* Informative Cards Section */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+        .info-card { 
+            background-color: #f8fafc; 
+            padding: 2rem; 
+            border-radius: 12px; 
+            border: 1px solid #e2e8f0;
+            transition: transform 0.2s ease, box-shadow 0.2s ease; 
+        }
+        .info-card:hover { 
+            transform: translateY(-4px); 
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
+            background-color: #ffffff;
+        }
+        .info-card h4 { 
+            color: var(--secondary-color); 
+            font-size: 1.3rem; 
+            margin-bottom: 0.8rem; 
+            margin-top: 0;
+        }
+        .info-card p { 
+            color: var(--text-color); 
+            font-size: 0.98rem; 
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        /* External Trust Links Section */
+        .external-links-box {
+            background-color: #f1f5f9;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+        .external-links-box h3 {
+            margin-top: 0;
+        }
+        .link-list {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        @media (max-width: 600px) {
+            .link-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        .link-list li a {
+            display: inline-block;
+            background-color: #ffffff;
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #cbd5e1;
+            font-weight: 500;
+            text-align: center;
+        }
+        .link-list li a:hover {
+            border-color: var(--secondary-color);
+            background-color: var(--accent-color);
+        }
+
+        /* Modal styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-dialog {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 700px;
+            border-radius: 12px;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            max-height: 85vh;
+        }
+        .contWin {
+            padding: 2rem;
+            position: relative;
+            overflow-y: auto;
+        }
+        .btnClosePopup {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            cursor: pointer;
+        }
+        .popupTitle {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+        .scrollWrap {
+            max-height: 50vh;
+            overflow-y: auto;
+            border: 1px solid #e2e8f0;
+            padding: 1rem;
+            background-color: #f8fafc;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .agreeAllCell {
+            margin: 1.5rem 0;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+        .agreeAllCell input {
+            margin-right: 0.5rem;
+            width: 1.1rem;
+            height: 1.1rem;
+        }
+        .agreeBox {
+            border-bottom: 1px solid #cbd5e1;
+            padding: 1rem 0;
+        }
+        .agreeBox:last-child {
+            border-bottom: none;
+        }
+        .titleCell {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .titleCell span {
+            color: var(--secondary-color);
+        }
+        .agreeTextCell {
+            color: #475569;
+            font-size: 0.8rem;
+            max-height: 100px;
+            overflow-y: auto;
+            border: 1px solid #f1f5f9;
+            padding: 0.5rem;
+            background: #ffffff;
+        }
+        .btnConfirm {
+            background-color: var(--secondary-color);
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 1.5rem;
+        }
+
+        /* Mobile Optimization and Layout Tweaks */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.6rem; }
+            h3 { font-size: 1.3rem; }
+            .banner-area { padding: 40px 0 100px 0; }
+            .mainFormWrap { padding: 24px; margin-top: -80px; }
+            .mainTextCell { font-size: 1.6rem; }
+            .subTextCell { font-size: 1rem; margin-bottom: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-container">
+            <a class="navbar-brand" href="/">
+                자동차보험비교<span>센터</span>
+            </a>
+            <a href="#mainForm" title="보험 비교 견적 신청하기" class="quick_link_btn">
+                무료 계산 시작하기
+            </a>
+        </div>
+    </header>
+
     <main>
-      <h1>Home page</h1>
+        <!-- Hero Banner Section -->
+        <section class="banner-area">
+            <div class="container">
+                <div class="banner-content">
+                    <h1>
+                        2026년형 <span class="highlight">다이렉트 자동차보험비교</span> 분석<br>
+                        가장 합리적인 예상 보험료 계산 가이드
+                    </h1>
+                    <p>
+                        국내 주요 보험사별 실시간 다이렉트 견적 가격을 투명하게 비교하고,<br>
+                        나에게 최적화된 연령별 맞춤 특별 할인 혜택을 한자리에서 바로 확인하십시오.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Form Section with Enhanced Dwell-Time Interactive Inputs -->
+        <section class="feature-area">
+            <div class="container">
+                <div id="mainForm" class="mainFormWrap">
+                    <div class="mainTextCell">
+                        다이렉트 자동차보험비교 통합 견적
+                    </div>
+                    <div class="subTextCell">
+                        간단한 기본 정보 입력 및 옵션 설정만으로 정확한 비교 상담을 준비합니다.
+                    </div>
+
+                    <div class="form-grid">
+                        <!-- Name Field -->
+                        <div class="input-group">
+                            <label for="frmS01Name">이름</label>
+                            <input type="text" id="frmS01Name" name="frmS01Name" placeholder="성함을 입력해주세요">
+                        </div>
+
+                        <!-- Mobile Field Prefix & Input combined in styling -->
+                        <div class="input-group">
+                            <label for="frmS01Mphone">휴대폰 번호</label>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <select id="phoneHeadSelect" aria-label="휴대폰 앞자리" class="phoneHeadSelector_m" style="flex: 1;">
+                                    <option value="010" selected>010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select>
+                                <input type="text" id="frmS01Mphone" name="frmS01Mphone" placeholder="숫자만 입력해 주십시오" style="flex: 2;">
+                            </div>
+                        </div>
+
+                        <!-- Interactive Segment: Age Selection (Dwell time booster) -->
+                        <div class="input-group">
+                            <label for="ageSegment">소유자 연령대 설정</label>
+                            <select id="ageSegment">
+                                <option value="20s_early">20대 초반 (만 21세 미만)</option>
+                                <option value="20s_mid">20대 중반 (만 24세 미만)</option>
+                                <option value="26plus" selected>만 26세 이상</option>
+                                <option value="30s">30대 평균 기준</option>
+                                <option value="40s">40대 패밀리 운전자</option>
+                                <option value="50s">50대 우수 운전자</option>
+                                <option value="60plus">60대 이상 시니어</option>
+                            </select>
+                        </div>
+
+                        <!-- Interactive Segment: Vehicle Model Selector (Dwell time booster) -->
+                        <div class="input-group">
+                            <label for="carModelSelect">비교 대상 차량 세그먼트</label>
+                            <select id="carModelSelect">
+                                <option value="경차">캐스퍼, 레이, 모닝 등 경형 컴팩트</option>
+                                <option value="준중형" selected>아반떼, K3 등 준중형 베스트셀러</option>
+                                <option value="중형">쏘나타, K5 등 표준 패밀리 세단</option>
+                                <option value="준대형">그랜저, K8 등 대형 플래그십</option>
+                                <option value="SUV">스포티지, 쏘렌토, 투싼, 팰리세이드 등 SUV 계열</option>
+                                <option value="미니반">카니발 등 다목적 레저 차량</option>
+                                <option value="프리미엄">제네시스 G80, GV80 등 럭셔리 라인업</option>
+                                <option value="친환경">아이오닉5, EV6 등 순수 전기 EV 차종</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Interest Checkbox Group to increase user click rate and stay time -->
+                    <div class="checkbox-container-title">관심 있는 추가 할인 옵션 (중복 선택 가능)</div>
+                    <div class="checkbox-grid">
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="discountOption" value="mileage" checked>
+                            <span>마일리지 운행거리</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="discountOption" value="blackbox">
+                            <span>블랙박스 상시녹화</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="discountOption" value="children">
+                            <span>자녀 할인 특약</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="discountOption" value="tmap">
+                            <span>Tmap 안전 점수</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="discountOption" value="ubidriver">
+                            <span>UBI 운전 습관</span>
+                        </label>
+                        <label class="checkbox-item">
+                            <input type="checkbox" name="discountOption" value="card">
+                            <span>제휴 신용카드 청구</span>
+                        </label>
+                    </div>
+
+                    <div class="inputInfoTextCell">
+                        안내사항: 남겨주신 정보는 실시간 자동차보험비교 전문 상담과 원활한 예상 비용 계산기 도출에만 안전하게 활용됩니다.
+                    </div>
+                    <div class="inputInfoTextCell showPolicyWin">
+                        <input class="checkMain" id="privacyAgree3" name="check" type="checkbox">
+                        <label for="privacyAgree3">개인정보 수집 및 이용 제공 동의에 동의합니다</label>
+                        <span class="btnViewPolicy" id="btnOpenPrivacy">약관 보기</span>
+                    </div>
+                    <button type="button" id="btnSubmitS01" class="btnCompare" style="margin-top: 1.5rem;">내 맞춤 자동차보험비교 예상 견적 조회하기</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deep Informational long-form SEO Content Section -->
+        <section class="content-section">
+            <div class="container">
+                <h2>1. 2026년도 최신 대한민국 자동차보험비교 트렌드 분석</h2>
+                <p>
+                    자동차가 필수품이 된 현대 사회에서 매년 갱신해야 하는 의무 상품인 자동차보험의 갱신 시점은 늘 소비자들에게 합리적인 비용 소모를 위한 고민의 대상이 됩니다. 2026년에 들어서며 정보기술과 금융공학의 결합으로 복잡해진 자동차보험비교 시장에서 다이렉트 가입 방식은 더욱 지능적으로 변화했습니다. 과거에는 단순하게 유명한 브랜드 이름을 따라가거나 기존 보험사 제안을 그대로 갱신하는 비중이 지배적이었으나, 최근에는 금융당국의 플랫폼 연계 장려 정책과 온라인 인프라 활성화로 인해 소비자가 스스로 자동차보험비교 전문 사이트 및 어플 기반의 계산기를 적용하여 예상 금액을 꼼꼼히 산출하는 문화가 완전히 정착되었습니다.
+                </p>
+                <p>
+                    이제 소비자들은 네이버, 구글 등 대형 검색 포털에서 실시간 자동완성키워드나 연관검색어로 추천 정보를 탐색하는 것뿐만 아니라, 다양한 커뮤니티의 실제 내돈내산 가입 후기 등을 공유받으며 현명한 소비를 이어가고 있습니다. 특히 디시인사이드 차갤, 보배드림, 펨코(에펨코리아) 등 대형 온라인 소통 채널에서는 할인율이 가장 높고 서비스가 우수한 업체를 순위별로 리스트업하여 공유하는 흐름이 거세지고 있습니다. 이번 전문 가이드에서는 2026년 기준 연령대별, 세부 차량 모델별 자동차보험비교 핵심 체크리스트와 합리적으로 예상 가격을 설계하는 모든 전략적 컨설팅 팁을 남김없이 전달해 드립니다.
+                </p>
+
+                <h2>2. 연령대별 자동차보험료 평균 예상 금액 및 편차 분석</h2>
+                <p>
+                    다이렉트 자동차보험료를 결정짓는 핵심 지표 중 하나는 바로 피보험자의 연령입니다. 통계적 데이터를 바탕으로 한 손해율 산출 체계에 따라 운전 경험이 적은 20대 초반과 상대적으로 운전 안정성이 높게 검증된 30대, 40대, 50대의 평균 보험 비용은 매우 큰 편차를 보입니다. 아래에서는 각 세대별로 평균적으로 얼마의 예산을 확보해야 하며, 어떤 조건으로 자동차보험비교 시 가장 합리적인 견적을 받을 수 있는지 분석합니다.
+                </p>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>연령 및 조건 구분</th>
+                                <th>평균 예상 연간 비용 범위</th>
+                                <th>가장 중요한 할인 특약 추천</th>
+                                <th>단점 극복 및 절약 핵심 팁</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>만 21세 이하 (20대 초반)</td>
+                                <td>150만원 ~ 240만원 선</td>
+                                <td>부모님 밑으로 지정 1인 추가 등록</td>
+                                <td>경력이 짧아 가장 비싼 나이대이므로 초기 경력 지정을 활용해야 금액이 떨어집니다.</td>
+                            </tr>
+                            <tr>
+                                <td>만 24세 이상 (20대 중반)</td>
+                                <td>110만원 ~ 170만원 선</td>
+                                <td>티맵 안전운전 점수 및 블랙박스 특약</td>
+                                <td>안전운전 점수 80점 이상을 획득하면 평균 10퍼센트 이상의 할인 혜택 획득 가능합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>만 26세 이상 (20대 후반)</td>
+                                <td>80만원 ~ 130만원 선</td>
+                                <td>마일리지 및 커넥티드카 할인</td>
+                                <td>본격적으로 단독 명의 가입 장단점이 균형을 잡는 시기로, 다이렉트 견적 사이트 비교가 유용합니다.</td>
+                            </tr>
+                            <tr>
+                                <td>30대 평균 가입자</td>
+                                <td>50만원 ~ 90만원 선</td>
+                                <td>자녀 할인 특약 및 부부 한정 범위 세팅</td>
+                                <td>가장 보편적인 안정기로 패밀리 드라이버 맞춤형 온라인 사이트 이벤트를 체크하는 것이 정답입니다.</td>
+                            </tr>
+                            <tr>
+                                <td>40대 및 50대 골드 드라이버</td>
+                                <td>45만원 ~ 75만원 선</td>
+                                <td>대중교통 이용 할인 및 마일리지 특약</td>
+                                <td>과거 사고 이력이 없다면 제일 싼곳을 선점할 수 있으며 카카오톡, 토스 앱을 활용한 점검이 추천됩니다.</td>
+                            </tr>
+                            <tr>
+                                <td>60대 이상 시니어 가입자</td>
+                                <td>60만원 ~ 100만원 선</td>
+                                <td>교통안전교육 이수 특약 및 안전장치 특약</td>
+                                <td>신체 반응 능력을 보조하는 첨단 주행 장치가 탑재된 최신 차량 모델 위주로 선택 시 기본 공제가 적용됩니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="highlight-box">
+                    <p>
+                        주요 요약: 20대 초반 연령대는 최초 신규 가입 시 단독 명의로 시작하는 것보다 운전 경력이 오래된 가족 구성원의 명의 밑으로 가족한정 혹은 지정 1인 등록으로 동승 가입을 한 뒤, 추후 가입 경력 인정을 받아 단독 명의로 독립하는 것이 전체 누적 비용을 아끼는 데 가장 지혜로운 절차입니다.
+                    </p>
+                </div>
+
+                <h2>3. 차종별 세부 모델에 따른 다이렉트 자동차보험료 차이점</h2>
+                <p>
+                    자동차보험비교 상담에서 연령 다음으로 중추적인 역할을 맡는 것은 차종 세그먼트입니다. 아반떼와 K3로 대표되는 준중형 모델과 그랜저, K8과 같은 준대형 고급 세단, 그리고 쏘렌토, 투싼, 스포티지, 팰리세이드 등 아웃도어용 대형 SUV 차량 간에는 자차보험료(자기차량손해)의 비중이 다르게 매겨집니다. 차량 출고가가 상대적으로 고가에 형성되어 있는 제네시스 G80 등의 프리미엄 브랜드는 동일 등급 연령대라 하더라도 부품 가격과 도장 비용 수준에 근거하여 자차 보장 범위의 예상 금액 산출액이 대폭 증가할 수밖에 없습니다.
+                </p>
+                <p>
+                    특히 2026년 자동차보험 시장에서 주목받는 분야는 아이오닉5, EV6 등의 전기 친환경 EV 차량입니다. 전기차는 고전압 배터리 파손 시 수리 비용이 천문학적으로 발생하여 일반적인 내연기관 아반떼에 비해 기본 자차 담보 견적이 약 15퍼센트에서 25퍼센트 가량 높게 책정되는 단점이 존재합니다. 하지만 이를 완화하기 위한 전기차 전용 특별 약정을 제공하는 다이렉트 특화 업체를 면밀히 따져 본다면 전용 긴급출동 서비스와 우대 할인 혜택을 통해 상당 부분 합리적인 격차로 계산기를 축소 시킬 수 있습니다.
+                </p>
+
+                <h2>4. 실시간으로 똑똑하게 아끼는 할인 특약 종류와 혜택</h2>
+                <p>
+                    다이렉트 인터넷 가입의 가장 매력적인 장점은 중간 대리점 수수료를 생략하여 설계사 수수료 마진 없이 평균 15퍼센트 가량 싸게 가져가는 것 외에도 다양하게 중복 설계가 가능한 할인 특약들이 촘촘히 준비되어 있다는 부분입니다. 2026년 주요 손해보험 브랜드들이 공통적으로 주력하고 있는 유용한 특약 리스트를 소개합니다.
+                </p>
+                <ul>
+                    <li><strong>운행거리 마일리지 연동 특약:</strong> 주행을 적게 하면 적게 할수록 만기 시점에 현금 보상 혹은 계좌 환급 방식으로 돌려받는 강력한 제도로, 연간 3천 킬로미터 이하 주행 시 최고 35퍼센트 내외의 폭넓은 환급 혜택을 돌려받아 누구나 가장 저렴한곳을 연출할 수 있습니다.</li>
+                    <li><strong>안전운전 점수 연동형 특약 (UBI):</strong> 모바일 내비게이션 플랫폼인 TMAP(티맵) 혹은 카카오네비의 실시간 점수를 산정하여 규정 속도 준수, 급가속 방지 점수를 충족할 경우 기본 담보 가격 대비 큰 폭의 할인을 즉각 가입 시점에 제공하는 혁신적 시스템입니다.</li>
+                    <li><strong>자녀 동승 우대 혜택:</strong> 미취학 영유아나 태아를 동반한 가정의 안정적 운행 습관을 보증하여 손해 발생 가능성을 예방한다는 차원에서 자녀 할인율을 적용받을 수 있습니다.</li>
+                    <li><strong>블랙박스 상시 장착 검증:</strong> 대중화된 차량 내 필수 장비인 상시 상방향 고화질 블랙박스의 시리얼 번호와 사진을 제출함으로써 보장 수준을 동일하게 유지하며 매년 비용의 일부를 가볍게 줄일 수 있습니다.</li>
+                    <li><strong>커넥티드카 데이터 테크 연계:</strong> 차량 제조사 순정 내비게이션(현대 블루링크, 기아 커넥트 등) 시스템에서 원격 수집되는 주기적인 통계 데이터와 자동 안전 통제 기능을 탑재한 소유 차량을 대상으로 자동 감액 공제를 제공해 줍니다.</li>
+                </ul>
+
+                <h2>5. 커뮤니티(디시, 보배드림, 펨코) 내돈내산 실제 후기로 밝힌 주의사항</h2>
+                <p>
+                    자동차 포럼으로 유명한 보배드림이나 에펨코리아, 디시인사이드 내부의 현실적인 이용자 반응을 모니터링해보면, 과도하게 제시되는 첫 회 사은품이나 현금지원 프로모션, 각종 제휴 상품권 보상 마케팅에만 매몰되지 말 것을 강력하게 당부하는 목소리를 공통적으로 접하게 됩니다. 일부 가입 경로에서 과도한 미끼 상품이나 우회적인 현금성 대가를 대대적으로 홍보하기도 하지만, 이는 실질적으로 장기적 관점의 매년 청구서 총금액과 자기부담금 등 세부 보상 조건이 다소 보수적으로 지정되어 발생하는 착시일 수 있습니다.
+                </p>
+                <p>
+                    실제로 '내돈내산' 형태의 고관여 리뷰어가 쓴 게시글에서는 보상 규모를 든든하게 지정하는 대인 대물 무제한 범위 설정과 자기차량손해 시 본인 면책 한도 설정, 무보험차 상해 5억원 이상 증액 설정을 권고하고 있습니다. 싼곳만 과도하게 쫓아 대물 한도를 최저 기준인 2억원 선으로 제한해 버린 상황에서 프리미엄 세단이나 수입 전기 차종과의 복합 다중 충돌이 수반될 경우, 보상 한도가 초과되어 개인이 전액 민사적 부담을 끌어안아야 하는 엄청난 단점이 발생할 위험이 있습니다.
+                </p>
+
+                <h2>6. AI 시대를 여는 2026년 인공지능 기반 자동차보험비교 혁신</h2>
+                <p>
+                    구글 제미나이(Gemini), 오픈AI의 챗지피티(ChatGPT), 그리고 국산 금융 테크 플랫폼인 토스, 네이버 페이, 카카오 페이 등 지능형 AI 에이전트 서비스가 일상화된 2026년 현재에는 소비자들이 본인의 이전 가입 내역서 파일을 PDF 형태로 입력하고 간단하게 "내 지난 계약 조건에서 불필요한 약정을 걸러내고 가장 저렴한곳으로 최적화해줘"라는 명령어를 던져 맞춤형 대안을 설계받는 맞춤 상담 및 컨설팅 시장이 펼쳐져 있습니다. 
+                </p>
+                <p>
+                    컴퓨터나 어플리케이션을 통한 자동차보험료 계산 과정에서 AI 알고리즘은 사용자의 실제 주말 운행 성향, 연간 장거리 고속도로 출퇴근 빈도, 운전 버릇 기록 등을 다각적으로 연산하여 맞춤화된 특약들만 정밀 조합합니다. 소비자는 복잡한 전문 약관 설명서를 긴 시간 읽어 내려가지 않더라도, 객관적으로 증명된 각 보험 브랜드별 실제 지급 보상율, 콜센터 응대 신속성 순위 점수를 즉석에서 일목요연하게 점검하고 투명한 선택을 할 수 있는 똑똑한 환경을 보장받게 되었습니다.
+                </p>
+
+                <h2>7. 함께 많이 찾는 검색 카테고리 정보 및 자주 묻는 질문</h2>
+                <p>
+                    소비자들의 정보 갈증을 해결하고 검색 트래픽 점유 측면에서도 유의미하게 체류를 유도하는 주요 쟁점 문항들을 질문 및 답변 방식으로 체계적으로 서술합니다.
+                </p>
+
+                <h3>Q1. 신차 출고 시와 중고차 구매 시 자동차보험 비교 가입의 차이점은 무엇인가요?</h3>
+                <p>
+                    가장 주된 차이점은 차량 가액의 산정 방식에 있습니다. 공장 출고 직후의 완전 신차는 제조사의 세금계산서 상 정가 총액을 그대로 기준으로 삼아 자차 담보 비용이 다소 높게 매겨지며 신차 전용 수리 교체 보장 특약을 더해 완벽하게 새 차 상태를 지킬 수 있습니다. 반면 연식이 진행된 중고 차량은 보험개발원에서 연도별 및 감가상각 가이드라인에 따라 공식적으로 지정한 분기별 잔존 시세 가액을 기준으로 자차 요율이 고정되어 시작하기 때문에, 차대비 전체 보험 가격 자체는 낮아지나 차량 노후도로 인한 운행 불가 리스크 등을 감안하여 긴급 견인 거리를 최장으로 확장해 두는 구성이 단점을 커버해 주는 비결입니다.
+                </p>
+
+                <h3>Q2. 인터넷에서 많이 이야기하는 오프라인 가입 방식과 다이렉트 가입의 차이는?</h3>
+                <p>
+                    설계사나 지점 오프라인 채널을 통한 계약은 맞춤형 1:1 정밀 포트폴리오를 대면하여 차분하게 컨설팅받을 수 있는 안정성은 존재하나, 필수적으로 약 10퍼센트에서 많게는 20퍼센트 이상의 영업 중간 마진이 기본 견적서 비용에 고스란히 추가되는 치명적인 아쉬움이 있습니다. 이에 반해 사용자가 모바일 스마트폰이나 노트북 브라우저로 다이렉트 사이트에 직진 가입하는 것은 대면 수수료와 지점 유지 고정비가 원천 제거되어 완전히 동일한 무제한 보장을 약속받으면서도 불필요한 사업비를 덜어내 가장 스마트한 지출을 이뤄낼 수 있는 정량적인 장점을 가집니다.
+                </p>
+
+                <h3>Q3. 친환경 전기 자동차만의 특수 보험료 책정 방식은 어떠합니까?</h3>
+                <p>
+                    친환경 차량의 배터리 파손은 단순 단순 수리가 불가하고 팩 전체를 1:1 무조건 새 제품으로 교체해야 하는 특수성이 존재합니다. 따라서 자차 담보 항목에 배터리 전액 교체 초과비용 미적용 특약이 포함되는지에 대해 꼭 비교가 필요합니다. 이 자차 영역의 비용이 다소 비싸게 느껴지더라도 에코 차량 우대 할인, 자율안전 보조 센서 의무 탑재 할인 특약을 십분 녹여낸다면 기본 단속 요금에 준하는 비용 세이브 효과를 확실하게 체험할 수 있어 결과적 체감 지출은 크게 엇비슷해집니다.
+                </p>
+
+                <!-- 5 Authorized External Trust Links for Naver and Google Credibility -->
+                <div class="external-links-box">
+                    <h3>공신력 있는 정부 부처 및 공공기관 정보 출처 안내</h3>
+                    <p>
+                        자동차보험은 국가에서 정한 법적 의무 상품인 만큼 제도 변화와 정직한 보호 정책 정보를 접하는 것이 가장 현명합니다. 아래의 공식 권위 있는 기관 링크를 통하여 올바른 가이드라인을 탐독해 보시기 바랍니다.
+                    </p>
+                    <ul class="link-list">
+                        <li><a href="https://www.fss.or.kr" target="_blank" rel="noopener noreferrer">금융감독원 공식 통합 사이트</a></li>
+                        <li><a href="https://www.kidi.or.kr" target="_blank" rel="noopener noreferrer">보험개발원 통계 데이터 센터</a></li>
+                        <li><a href="https://www.koroad.or.kr" target="_blank" rel="noopener noreferrer">도로교통공단 안전 정보 광장</a></li>
+                        <li><a href="https://www.kca.go.kr" target="_blank" rel="noopener noreferrer">한국소비자원 피해 구제 가이드</a></li>
+                        <li><a href="https://namu.wiki/w/%EC%9E%90%EB%8F%99%EC%B0%A8%EB%B3%B4%ED%97%98" target="_blank" rel="noopener noreferrer">나무위키 자동차보험 상세 백과사전</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Second Form Section for Conversion and Extra Dwell Time Engagement -->
+        <section class="feature-area" style="background-color: #f1f5f9; border-top: 1px solid #cbd5e1;">
+            <div class="container">
+                <div class="mainFormWrap" style="margin-top: 0;">
+                    <div class="mainTextCell" style="font-size: 1.8rem;">
+                        다이렉트 무료 비교 견적 상담 접수처
+                    </div>
+                    <div class="subTextCell" style="margin-bottom: 2rem;">
+                        전담 어드바이저와의 유선 상담 및 메신저 포트폴리오 전달을 무료로 제공해 드립니다.
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="frmS02Name">소유자 이름</label>
+                            <input type="text" id="frmS02Name" name="frmS02Name" placeholder="성함을 입력해주세요">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="frmS02Mphone">연락처</label>
+                            <div style="display: flex; gap: 0.5rem;">
+                                <select id="phoneHeadSelect2" aria-label="휴대폰 앞자리" class="phoneHeadSelector" style="flex: 1;">
+                                    <option value="010" selected>010</option>
+                                    <option value="011">011</option>
+                                    <option value="016">016</option>
+                                    <option value="017">017</option>
+                                    <option value="018">018</option>
+                                    <option value="019">019</option>
+                                </select>
+                                <input type="text" id="frmS02Mphone" name="frmS02Mphone" placeholder="숫자만 입력해 주십시오" style="flex: 2;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="inputInfoTextCell">
+                        참고사항: 기입해 주신 휴대폰 번호로는 스팸성 전화를 발송하지 않으며, 안심하고 견적을 받으실 수 있는 임시용 통로입니다.
+                    </div>
+                    <div class="inputInfoTextCell showPolicyWin">
+                        <input class="checkMain" id="privacyAgree2" name="check" type="checkbox">
+                        <label for="privacyAgree2">개인정보 수집 및 제공 필수 약정에 성실히 동의합니다</label>
+                        <span class="btnViewPolicy" id="btnOpenPrivacy2">규정 확인</span>
+                    </div>
+                    <button type="button" id="btnSubmitS02" class="btnCompare" style="margin-top: 1.5rem; background-color: var(--primary-color);">상담 접수 후 비교 결과서 수령하기</button>
+                </div>
+            </div>
+        </section>
     </main>
-  </body>
-</html>
+
+    <!-- Modal for Privacy Policy with robust controls for compliance -->
+    <div class="modal" id="privacyPopup">
+        <div class="modal-dialog">
+            <div class="contWin">
+                <svg class="btnClosePopup" id="btnCloseModal" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                <div class="popupTitle">개인(신용)정보 수집, 이용, 제공 동의서</div>
+                <div class="scrollWrap">
+                    <p>
+                        상품 서비스 안내 등을 위하여 본인의 개인(신용)정보를 수집, 이용하거나 제 3자에게 제공하는 경우에는 개인정보보호법에 의거하여 관련 법률에 준하는 사전 동의 프로세스가 진행되어야 합니다.
+                    </p>
+                    <div class="agreeBox">
+                        <div class="titleCell">1. 수집하는 정보 제공처 및 목적 <span>필수동의</span></div>
+                        <div class="agreeTextCell">
+                            수집 목적: 다이렉트 자동차보험비교 통합 플랫폼을 활용한 차종 및 연령에 어울리는 최적의 예상금액 산출 컨설팅 전화 및 문자 회신.<br>
+                            수집 대상: 이름, 연락처, 지정 연령대 데이터.<br>
+                            보유 기간: 서비스 완료 시점 혹은 접수 동의일로부터 최대 5년간 보관 후 분쇄 및 안전 폐기 처리.
+                        </div>
+                    </div>
+                    <div class="agreeBox">
+                        <div class="titleCell">2. 마케팅 연계 제공 및 대행사 위탁 <span>선택동의</span></div>
+                        <div class="agreeTextCell">
+                            위탁 목적: 다양한 브랜드 및 이벤트 정보 등 혜택 정보 안내.<br>
+                            미동의 시 패널티: 선택사항으로서 이에 동의하지 않아도 기본적인 실시간 비교 서비스를 완벽하게 활용하는 데 제한이 따르지 않습니다.
+                        </div>
+                    </div>
+                </div>
+                <div class="agreeAllCell">
+                    <input class="checkAll" id="checkAllAgree" type="checkbox">
+                    <label for="checkAllAgree">모든 상세 약관 항목에 한 번에 전체동의합니다.</label>
+                </div>
+                <div class="btnConfirm" id="btnConfirmClose">이해하였으며 동의를 확정합니다</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS scripts area with clean implementations -->
+    <script type="text/javascript" src="https://nawaracar.com/theme/barit/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://nawaracar.com/theme/barit/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Modal visibility controls
+            function showPrivacyModal() {
+                $("#privacyPopup").css("display", "flex");
+            }
+
+            function hidePrivacyModal() {
+                $("#privacyPopup").css("display", "none");
+            }
+
+            $("#btnOpenPrivacy, #btnOpenPrivacy2, .btnViewPolicy").on("click", function (e) {
+                e.preventDefault();
+                showPrivacyModal();
+            });
+
+            $("#btnCloseModal, #btnConfirmClose").on("click", function () {
+                hidePrivacyModal();
+            });
+
+            // Sync overall terms agreement checkboxes when users agree inside modal
+            $("#checkAllAgree").on("change", function () {
+                var isChecked = $(this).prop("checked");
+                $("#privacyAgree2, #privacyAgree3").prop("checked", isChecked);
+            });
+
+            // Number validation only for mobile text fields
+            $("#frmS01Mphone, #frmS02Mphone").on("keyup", function () {
+                var currentVal = $(this).val();
+                $(this).val(currentVal.replace(/[^0-9]/gi, ''));
+            });
+
+            // AJAX Form Submit implementation for Form 1
+            $("#btnSubmitS01").on("click", function () {
+                const userName = $("#frmS01Name").val().trim();
+                const phoneHead = $("#phoneHeadSelect").val();
+                const phoneBody = $("#frmS01Mphone").val().trim();
+                const userPhone = phoneHead + phoneBody;
+                const isChecked = $("#privacyAgree3").prop("checked");
+
+                const chosenAge = $("#ageSegment").val();
+                const chosenCar = $("#carModelSelect").val();
+                
+                // Collect chosen options to populate inside content
+                let chosenDiscounts = [];
+                $("input[name='discountOption']:checked").each(function () {
+                    chosenDiscounts.push($(this).val());
+                });
+
+                const contentData = "차량: " + chosenCar + " | 연령구분: " + chosenAge + " | 희망할인옵션: " + chosenDiscounts.join(", ");
+
+                if (!userName) {
+                    alert("이름을 기재해 주시기 바랍니다.");
+                    return;
+                }
+                if (phoneBody.length < 7) {
+                    alert("전화번호를 규격에 맞춰 정상 기입해 주시기 바랍니다.");
+                    return;
+                }
+                if (!isChecked) {
+                    alert("원활한 진행을 위해 개인정보 보호 수집 약관에 동의하셔야 합니다.");
+                    showPrivacyModal();
+                    return;
+                }
+
+                executeFormSubmission(userName, userPhone, contentData);
+            });
+
+            // AJAX Form Submit implementation for Form 2
+            $("#btnSubmitS02").on("click", function () {
+                const userName = $("#frmS02Name").val().trim();
+                const phoneHead = $("#phoneHeadSelect2").val();
+                const phoneBody = $("#frmS02Mphone").val().trim();
+                const userPhone = phoneHead + phoneBody;
+                const isChecked = $("#privacyAgree2").prop("checked");
+                const contentData = "2번상담창구를 통한 접수";
+
+                if (!userName) {
+                    alert("성함을 올바르게 작성해 주십시오.");
+                    return;
+                }
+                if (phoneBody.length < 7) {
+                    alert("연락처 정보를 명확하게 채워 주시기 바랍니다.");
+                    return;
+                }
+                if (!isChecked) {
+                    alert("진행을 이행하기 위해서 개인정보 동의는 필수사항입니다.");
+                    showPrivacyModal();
+                    return;
+                }
+
+                executeFormSubmission(userName, userPhone, contentData);
+            });
+
+            // Base data load functions
+            function fetchBaseConfig() {
+                const deferred = $.Deferred();
+                $.ajax({
+                    url: 'https://db.siwoomarketing.com/api/index.php?ctrl=landing.info',
+                    type: 'post',
+                    dataType: 'json',
+                    data: { land_uid: "9" },
+                    success: function (res) {
+                        deferred.resolve(res);
+                    },
+                    error: function (err) {
+                        deferred.reject(err);
+                    }
+                });
+                return deferred.promise();
+            }
+
+            // Centralized submit processing
+            async function executeFormSubmission(userName, userPhone, customContent = "") {
+                let configData;
+                let payload = {};
+
+                try {
+                    configData = await fetchBaseConfig();
+                } catch (e) {
+                    alert("서버 통신 상태가 지연되고 있습니다. 수 분 후 다시 실행해 주십시오.");
+                    return;
+                }
+
+                const smsTitle = configData["extra"]["config"]["sms_title"] || "자동차보험비교 서비스";
+                const smsMsg = configData["extra"]["config"]["sms_msg"] || "상담 신청이 정상 도달했습니다.";
+                const smsBroadcast = configData["extra"]["config"]["sms_broadcast"];
+                const smsUseCustomer = configData["extra"]["config"]["sms_use_customer"];
+                const smsUseBroadcast = configData["extra"]["config"]["sms_use_broadcast"];
+                const userId = configData["extra"]["config"]["user_id"];
+                const landUid = configData["extra"]["config"]["land_uid"];
+
+                payload["inqType"] = 2;
+                payload["smsTitle"] = smsTitle;
+                payload["smsMsg"] = smsMsg;
+                payload["msgType"] = "mms";
+                payload["smsBroadcastNumber"] = smsBroadcast;
+                payload["smsSendYN"] = smsUseCustomer;
+                payload["smsSendBroadcastYN"] = smsUseBroadcast;
+                payload["user_id"] = userId;
+                payload["land_uid"] = landUid;
+                payload["rcv_event_sms"] = "Y";
+                payload["content"] = customContent;
+                payload["returnUrl"] = "";
+                payload["refererUrl"] = "";
+                payload["campUid"] = "";
+                payload["utmMedium"] = "";
+                payload["showCompleteAlertMsg"] = "Y";
+                payload["name"] = userName;
+                payload["mphone"] = userPhone;
+
+                $.ajax({
+                    url: "https://db.siwoomarketing.com/api/index.php?ctrl=inq.regist",
+                    type: "post",
+                    dataType: "json",
+                    data: payload,
+                    success: function (data) {
+                        if (data["returnCode"]) {
+                            alert("보험료 비교 견적 컨설팅 신청이 정상 접수되었습니다. 전담 상담원이 순차적으로 안내 연락을 올리겠습니다.");
+                            document.location.reload();
+                        } else {
+                            alert(data["returnMsg"] || "등록 도중 다소의 문제가 식별되었습니다.");
+                        }
+                    },
+                    error: function () {
+                        alert("API 서버 통신 불안정으로 인하여 임시 지연이 일어났습니다.");
+                    }
+                });
+            }
+        });
+    </script>
+    
